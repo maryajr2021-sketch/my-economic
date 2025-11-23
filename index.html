@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Интерактивный тест: Лиса и Заяц</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<h1>Интерактивный тест: Лиса и Заяц (экономический анализ)</h1>
+
+
+<div class="question" id="q1">
+<p><span class="q-number">Вопрос 1:</span> Почему дом лисы «ледяной» теряет ценность весной?</p>
+<div class="options">
+<button onclick="checkAnswer(this, 'B')">A) Лиса перестает его любить</button>
+<button onclick="checkAnswer(this, 'B')">B) Дом становится непригодным из-за тепла</button>
+<button onclick="checkAnswer(this, 'B')">C) Заяц угрожает лисе</button>
+<button onclick="checkAnswer(this, 'B')">D) Лиса хочет новый дизайн</button>
+</div>
+<div class="explanation">Правильный ответ: B. Дом — это ресурс, и его ценность зависит от обстоятельств: зимой он полезен, а весной тает и перестает быть убежищем.</div>
+</div>
+<div class="question" id="q2">
+<p><span class="q-number">Вопрос 2:</span> Почему лиса попросилась к зайцу и вскоре выгоняет его?</p>
+<div class="options">
+<button onclick="checkAnswer(this, 'B')">A) Она любит сюрпризы</button>
+<button onclick="checkAnswer(this, 'B')">B) Это рациональное решение для максимизации собственной полезности</button>
+<button onclick="checkAnswer(this, 'B')">C) Она хочет дружбы</button>
+<button onclick="checkAnswer(this, 'B')">D) Её дом стал слишком большим</button>
+</div>
+<div class="explanation">Правильный ответ: B. Лиса минимизирует издержки и извлекает выгоду, захватывая чужой дом.</div>
+</div>
+
+
+<div class="question" id="q3">
+<p><span class="q-number">Вопрос 3:</span> Почему заяц допустил лису к себе?</p>
+<div class="options">
+<button onclick="checkAnswer(this, 'B')">A) Он был слишком слабый</button>
+<button onclick="checkAnswer(this, 'B')">B) Альтруизм или недооценка риска</button>
+<button onclick="checkAnswer(this, 'B')">C) Он не знал, что лиса опасна</button>
+<button onclick="checkAnswer(this, 'B')">D) Ему понравилась лиса</button>
+</div>
+<div class="explanation">Правильный ответ: B. Заяц доверился без гарантий, что отражает риск потери собственности.</div>
+</div>
+
+<div class="question" id="q4">
+<p><span class="q-number">Вопрос 4:</span> Почему другие звери не выгоняют лису?</p>
+<div class="options">
+<button onclick="checkAnswer(this, 'B')">A) Они не видят проблемы</button>
+<button onclick="checkAnswer(this, 'B')">B) Издержки конфронтации слишком высоки</button>
+<button onclick="checkAnswer(this, 'B')">C) Они поддерживают лису</button>
+<button onclick="checkAnswer(this, 'B')">D) Им всё равно</button>
+</div>
+<div class="explanation">Правильный ответ: B. Страх делает действие экономически невыгодным.</div>
+</div>
+
+
+<div class="question" id="q5">
+<p><span class="q-number">Вопрос 5:</span> Какова роль петуха в истории?</p>
+<div class="options">
+<button onclick="checkAnswer(this, 'A')">A) Он устрашает лису, защищая собственность</button>
+<button onclick="checkAnswer(this, 'A')">B) Хочет забрать дом себе</button>
+<button onclick="checkAnswer(this, 'A')">C) Просто наблюдает</button>
+<button onclick="checkAnswer(this, 'A')">D) Дружит с лисой</button>
+</div>
+<div class="explanation">Правильный ответ: A. Петух восстанавливает справедливость с помощью санкций.</div>
+</div>
+
+<div class="question" id="q8">
+<p><strong>Вопрос 8:</strong> Какое поведение лисы можно охарактеризовать с точки зрения экономики?</p>
+<div class="options">
+<button onclick="checkAnswer(this, 'C')">A) Импульсивное</button>
+<button onclick="checkAnswer(this, 'C')">B) Бескорыстное</button>
+<button onclick="checkAnswer(this, 'C')">C) Оппортунистическое</button>
+<button onclick="checkAnswer(this, 'C')">D) Альтруистическое</button>
+</div>
+<div class="explanation">Правильный ответ: C. Лиса действует в своих интересах, используя ситуацию и слабость зайца для получения выгоды.</div>
+</div>
+
+
+<div class="question" id="q9">
+<p><strong>Вопрос 9:</strong> Как можно было предотвратить конфликт между зайцем и лисой?</p>
+<div class="options">
+<button onclick="checkAnswer(this, 'B')">A) Полностью изолироваться</button>
+<button onclick="checkAnswer(this, 'B')">B) Установить чёткие правила пользования домом</button>
+<button onclick="checkAnswer(this, 'B')">C) Позвать больше зверей</button>
+<button onclick="checkAnswer(this, 'B')">D) Разрушить дом</button>
+</div>
+<div class="explanation">Правильный ответ: B. Чёткие правила собственности и границы доступа снижают риск конфликтов и способствуют стабильности.</div>
+</div>
+
+
+<script>
+function checkAnswer(button, correct) {
+const explanation = button.parentElement.nextElementSibling;
+const options = button.parentElement.children;
+
+
+for (let opt of options) {
+opt.disabled = true;
+}
+
+
+if (button.textContent.includes(correct)) {
+button.classList.add('correct');
+} else {
+button.classList.add('wrong');
+for (let opt of options) {
+if (opt.textContent.includes(correct)) {
+opt.classList.add('correct');
+}
+}
+}
+explanation.style.display = 'block';
+}
+</script>
+
+
+</body>
+</html>
